@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Hello">Hello World, Click Me!</string>
-    <string name="ApplicationName">ChatingApp</string>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">ChatingApp</string>
+  <string name="FirebaseDatabaseURL">https://chatapp-51f70.firebaseio.com/</string>
 </resources>
