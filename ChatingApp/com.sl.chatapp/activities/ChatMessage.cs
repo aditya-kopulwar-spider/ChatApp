@@ -4,6 +4,8 @@ namespace ChatingApp
 {
     internal class ChatMessage
     {
+        private string v;
+
         public string User { get; set; }
 
         public string Message { get; set; }
@@ -14,16 +16,11 @@ namespace ChatingApp
         {
         }
 
-        public ChatMessage(string Message, DateTime dateTime)
-        {
-            this.Message = Message;
-            Time = dateTime.ToString("yyyy-MM-dd HH:mm:ss");
-        }
-
-        public ChatMessage(string Message, string User)
+        public ChatMessage(string Message, string User, string DateTime)
         {
             this.User = User;
             this.Message = Message;
+            Time = DateTime;
         }
     }
 }

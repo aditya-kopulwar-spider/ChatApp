@@ -5,8 +5,8 @@ using com.sl.ChatApp.adapters;
 using com.sl.ChatApp;
 using Firebase.Xamarin.Database;
 using System.Collections.Generic;
-using Firebase.Xamarin.Auth;
 using Firebase.Xamarin.Database.Query;
+using System;
 
 namespace ChatingApp
 {
@@ -30,6 +30,14 @@ namespace ChatingApp
             firebase = new FirebaseClient("https://chatapp-51f70.firebaseio.com/");
 
             initializeUI();
+            fetchChatMessages();
+            setupAdapter();
+        }
+
+        private void setupAdapter()
+        {
+            adapter = new ChatAdapter(messages, this);
+            chatMessageListView.Adapter = adapter;
         }
 
         private void initializeUI()
@@ -40,25 +48,26 @@ namespace ChatingApp
 
             sendButton.Click += delegate
             {
-                UploadMessageToFCM();
+                uploadMessageToFCM();
             };
         }
 
-        private async void UploadMessageToFCM()
+        private async void uploadMessageToFCM()
         {
-
+            string currentTime = DateTime.Now.ToString("yyyy - MM - dd HH: mm:ss");
             var items = await firebase
                 .Child("chats")
-                .PostAsync(new ChatMessage(inputMessage.Text, "Test_User"));
+                .PostAsync(new ChatMessage(inputMessage.Text, "Test_User", currentTime));
             inputMessage.Text = "";
 
-            DisplayChatMessage();
+            fetchChatMessages();
+            adapter.NotifyDataSetChanged();
         }
 
-        private async void DisplayChatMessage()
+        private async void fetchChatMessages()
         {
             firebase = new FirebaseClient("https://chatapp-51f70.firebaseio.com/");
-
+            messages.Clear();
             var items = await firebase
                 .Child("chats")
                 .OrderByKey()
@@ -68,14 +77,6 @@ namespace ChatingApp
             {
                 messages.Add(item.Object);
             }
-
-            if (messages.Count > 0)
-            {
-                adapter = new ChatAdapter(messages, this);
-                adapter.NotifyDataSetChanged();
-                chatMessageListView.Adapter = adapter;
-            }
-            
         }
     }
 }

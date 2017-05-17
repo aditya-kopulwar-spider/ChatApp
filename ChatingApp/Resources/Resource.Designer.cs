@@ -1893,8 +1893,8 @@ namespace com.sl.ChatApp
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f09006c
-			public const int action0 = 2131296364;
+			// aapt resource value: 0x7f090069
+			public const int action0 = 2131296361;
 			
 			// aapt resource value: 0x7f090051
 			public const int action_bar = 2131296337;
@@ -1917,17 +1917,17 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f09002e
 			public const int action_bar_title = 2131296302;
 			
-			// aapt resource value: 0x7f090069
-			public const int action_container = 2131296361;
+			// aapt resource value: 0x7f090066
+			public const int action_container = 2131296358;
 			
 			// aapt resource value: 0x7f090052
 			public const int action_context_bar = 2131296338;
 			
-			// aapt resource value: 0x7f090070
-			public const int action_divider = 2131296368;
+			// aapt resource value: 0x7f09006d
+			public const int action_divider = 2131296365;
 			
-			// aapt resource value: 0x7f09006a
-			public const int action_image = 2131296362;
+			// aapt resource value: 0x7f090067
+			public const int action_image = 2131296359;
 			
 			// aapt resource value: 0x7f090003
 			public const int action_menu_divider = 2131296259;
@@ -1944,11 +1944,11 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090030
 			public const int action_mode_close_button = 2131296304;
 			
-			// aapt resource value: 0x7f09006b
-			public const int action_text = 2131296363;
+			// aapt resource value: 0x7f090068
+			public const int action_text = 2131296360;
 			
-			// aapt resource value: 0x7f090079
-			public const int actions = 2131296377;
+			// aapt resource value: 0x7f090076
+			public const int actions = 2131296374;
 			
 			// aapt resource value: 0x7f090031
 			public const int activity_chooser_view_content = 2131296305;
@@ -1980,26 +1980,23 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090038
 			public const int buttonPanel = 2131296312;
 			
-			// aapt resource value: 0x7f09006d
-			public const int cancel_action = 2131296365;
-			
-			// aapt resource value: 0x7f090064
-			public const int chatMessageHeader = 2131296356;
-			
-			// aapt resource value: 0x7f090068
-			public const int chatMessageText = 2131296360;
-			
-			// aapt resource value: 0x7f090066
-			public const int chatMessageTimestamp = 2131296358;
+			// aapt resource value: 0x7f09006a
+			public const int cancel_action = 2131296362;
 			
 			// aapt resource value: 0x7f090065
-			public const int chatMessageUserName = 2131296357;
+			public const int chatMessageText = 2131296357;
+			
+			// aapt resource value: 0x7f090064
+			public const int chatMessageTimestamp = 2131296356;
+			
+			// aapt resource value: 0x7f090063
+			public const int chatMessageUserName = 2131296355;
 			
 			// aapt resource value: 0x7f090048
 			public const int checkbox = 2131296328;
 			
-			// aapt resource value: 0x7f090075
-			public const int chronometer = 2131296373;
+			// aapt resource value: 0x7f090072
+			public const int chronometer = 2131296370;
 			
 			// aapt resource value: 0x7f090027
 			public const int collapseActionView = 2131296295;
@@ -2031,8 +2028,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090024
 			public const int end = 2131296292;
 			
-			// aapt resource value: 0x7f09007f
-			public const int end_padder = 2131296383;
+			// aapt resource value: 0x7f09007c
+			public const int end_padder = 2131296380;
 			
 			// aapt resource value: 0x7f090032
 			public const int expand_activities_button = 2131296306;
@@ -2049,8 +2046,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090036
 			public const int icon = 2131296310;
 			
-			// aapt resource value: 0x7f09007a
-			public const int icon_group = 2131296378;
+			// aapt resource value: 0x7f090077
+			public const int icon_group = 2131296375;
 			
 			// aapt resource value: 0x7f09000d
 			public const int icon_only = 2131296269;
@@ -2061,8 +2058,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090033
 			public const int image = 2131296307;
 			
-			// aapt resource value: 0x7f090076
-			public const int info = 2131296374;
+			// aapt resource value: 0x7f090073
+			public const int info = 2131296371;
 			
 			// aapt resource value: 0x7f090061
 			public const int input_text = 2131296353;
@@ -2073,11 +2070,11 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090012
 			public const int light = 2131296274;
 			
-			// aapt resource value: 0x7f09007b
-			public const int line1 = 2131296379;
+			// aapt resource value: 0x7f090078
+			public const int line1 = 2131296376;
 			
-			// aapt resource value: 0x7f09007d
-			public const int line3 = 2131296381;
+			// aapt resource value: 0x7f09007a
+			public const int line3 = 2131296378;
 			
 			// aapt resource value: 0x7f090013
 			public const int listMode = 2131296275;
@@ -2085,14 +2082,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090035
 			public const int list_item = 2131296309;
 			
-			// aapt resource value: 0x7f09006f
-			public const int media_actions = 2131296367;
-			
-			// aapt resource value: 0x7f090063
-			public const int messageCell = 2131296355;
-			
-			// aapt resource value: 0x7f090067
-			public const int messageContainer = 2131296359;
+			// aapt resource value: 0x7f09006c
+			public const int media_actions = 2131296364;
 			
 			// aapt resource value: 0x7f090062
 			public const int message_list = 2131296354;
@@ -2115,14 +2106,14 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090014
 			public const int normal = 2131296276;
 			
-			// aapt resource value: 0x7f090078
-			public const int notification_background = 2131296376;
+			// aapt resource value: 0x7f090075
+			public const int notification_background = 2131296373;
 			
-			// aapt resource value: 0x7f090072
-			public const int notification_main_column = 2131296370;
+			// aapt resource value: 0x7f09006f
+			public const int notification_main_column = 2131296367;
 			
-			// aapt resource value: 0x7f090071
-			public const int notification_main_column_container = 2131296369;
+			// aapt resource value: 0x7f09006e
+			public const int notification_main_column_container = 2131296366;
 			
 			// aapt resource value: 0x7f09003a
 			public const int parentPanel = 2131296314;
@@ -2136,11 +2127,11 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f09004a
 			public const int radio = 2131296330;
 			
-			// aapt resource value: 0x7f090077
-			public const int right_icon = 2131296375;
+			// aapt resource value: 0x7f090074
+			public const int right_icon = 2131296372;
 			
-			// aapt resource value: 0x7f090073
-			public const int right_side = 2131296371;
+			// aapt resource value: 0x7f090070
+			public const int right_side = 2131296368;
 			
 			// aapt resource value: 0x7f09001e
 			public const int screen = 2131296286;
@@ -2220,8 +2211,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f09000e
 			public const int standard = 2131296270;
 			
-			// aapt resource value: 0x7f09006e
-			public const int status_bar_latest_event_content = 2131296366;
+			// aapt resource value: 0x7f09006b
+			public const int status_bar_latest_event_content = 2131296363;
 			
 			// aapt resource value: 0x7f09004b
 			public const int submenuarrow = 2131296331;
@@ -2232,11 +2223,11 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f090015
 			public const int tabMode = 2131296277;
 			
-			// aapt resource value: 0x7f09007e
-			public const int text = 2131296382;
+			// aapt resource value: 0x7f09007b
+			public const int text = 2131296379;
 			
-			// aapt resource value: 0x7f09007c
-			public const int text2 = 2131296380;
+			// aapt resource value: 0x7f090079
+			public const int text2 = 2131296377;
 			
 			// aapt resource value: 0x7f09003f
 			public const int textSpacerNoButtons = 2131296319;
@@ -2244,8 +2235,8 @@ namespace com.sl.ChatApp
 			// aapt resource value: 0x7f09003e
 			public const int textSpacerNoTitle = 2131296318;
 			
-			// aapt resource value: 0x7f090074
-			public const int time = 2131296372;
+			// aapt resource value: 0x7f090071
+			public const int time = 2131296369;
 			
 			// aapt resource value: 0x7f090037
 			public const int title = 2131296311;

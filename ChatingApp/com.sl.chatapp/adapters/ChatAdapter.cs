@@ -38,12 +38,14 @@ namespace com.sl.ChatApp.adapters
             LayoutInflater inflater = (LayoutInflater)activity.BaseContext.GetSystemService(Context.LayoutInflaterService);
             View messageView = inflater.Inflate(Resource.Layout.chat_row, null);
 
-            TextView message_content, message_timeStamp;
+            TextView message_content, message_timeStamp, message_user;
             message_content = messageView.FindViewById<TextView>(Resource.Id.chatMessageText);
             message_timeStamp = messageView.FindViewById<TextView>(Resource.Id.chatMessageTimestamp);
+            message_user = messageView.FindViewById<TextView>(Resource.Id.chatMessageUserName);
 
             message_content.Text = messages[position].Message;
             message_timeStamp.Text = messages[position].Time;
+            message_user.Text = messages[position].User;
 
             return messageView;
         }
