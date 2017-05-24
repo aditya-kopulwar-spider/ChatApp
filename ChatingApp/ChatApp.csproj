@@ -147,6 +147,7 @@
   <ItemGroup>
     <Compile Include="com.sl.chatapp\activities\ChatActivity.cs" />
     <Compile Include="com.sl.chatapp\activities\ChatMessage.cs" />
+    <Compile Include="com.sl.chatapp\activities\LogInActivity.cs" />
     <Compile Include="com.sl.chatapp\adapters\ChatAdapter.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,7 +155,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="GettingStarted.Xamarin" />
-    <None Include="google-services.json" />
+    <GoogleServiceJson Include="google-services.json" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -165,6 +166,15 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\chat_message_other.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\activity_login.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\rounded_corner.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\rounded_corner_1.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

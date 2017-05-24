@@ -1,11 +1,9 @@
 ﻿using System;
 
-namespace ChatingApp
+namespace com.sl.chatapp
 {
     internal class ChatMessage
     {
-        private string v;
-
         public string User { get; set; }
 
         public string Message { get; set; }

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using ChatingApp;
-using Java.Lang;
+using com.sl.chatapp;
 
 namespace com.sl.ChatApp.adapters
 {
@@ -14,11 +11,13 @@ namespace com.sl.ChatApp.adapters
     {
         private List<ChatMessage> messages;
         private Activity activity;
+        private string userName;
 
-        public ChatAdapter(List<ChatMessage> messages, Activity activity)
+        public ChatAdapter(List<ChatMessage> messages, Activity activity, string userName)
         {
             this.messages = messages;
             this.activity = activity;
+            this.userName = userName;
         }
 
         public override int Count => messages.Count;
@@ -39,13 +38,32 @@ namespace com.sl.ChatApp.adapters
             View messageView = inflater.Inflate(Resource.Layout.chat_row, null);
 
             TextView message_content, message_timeStamp, message_user;
-            message_content = messageView.FindViewById<TextView>(Resource.Id.chatMessageText);
-            message_timeStamp = messageView.FindViewById<TextView>(Resource.Id.chatMessageTimestamp);
-            message_user = messageView.FindViewById<TextView>(Resource.Id.chatMessageUserName);
+            if (userName.Equals(messages[position].User))
+            {
+                (messageView.FindViewById<RelativeLayout>(Resource.Id.othersMessageBox)).Visibility = ViewStates.Gone;
+                message_content = messageView.FindViewById<TextView>(Resource.Id.selfChatMessageText);
+                message_timeStamp = messageView.FindViewById<TextView>(Resource.Id.selfChatMessageTimestamp);
+                message_user = messageView.FindViewById<TextView>(Resource.Id.selfChatMessageUserName);
 
-            message_content.Text = messages[position].Message;
-            message_timeStamp.Text = messages[position].Time;
-            message_user.Text = messages[position].User;
+                message_content.Text = messages[position].Message;
+                message_timeStamp.Text = messages[position].Time;
+                message_user.Text = messages[position].User;
+            }
+            else
+            {
+                (messageView.FindViewById<RelativeLayout>(Resource.Id.selfMessageBox)).Visibility = ViewStates.Gone;
+                message_content = messageView.FindViewById<TextView>(Resource.Id.otherChatMessageText);
+                message_timeStamp = messageView.FindViewById<TextView>(Resource.Id.otherChatMessageTimestamp);
+                message_user = messageView.FindViewById<TextView>(Resource.Id.otherChatMessageUserName);
+
+                message_content.Text = messages[position].Message;
+                message_timeStamp.Text = messages[position].Time;
+                message_user.Text = messages[position].User;
+            }
+
+
+
+
 
             return messageView;
         }

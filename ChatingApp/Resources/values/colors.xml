@@ -3,4 +3,6 @@
   <color name="White">#FFFFFF</color>
   <color name="Black">#000000</color>
   <color name="Light_Blue">#bbdefb</color>
+  <color name="Dark_Blue">#021EAC</color>
+  <color name="Light_Green">#DAF7D4</color>
 </resources>

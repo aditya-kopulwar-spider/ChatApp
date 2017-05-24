@@ -5,13 +5,14 @@ using com.sl.ChatApp.adapters;
 using com.sl.ChatApp;
 using Firebase.Xamarin.Database;
 using System.Collections.Generic;
-using Firebase.Xamarin.Database.Query;
 using System;
+using Firebase.Database;
+using Firebase;
 
-namespace ChatingApp
+namespace com.sl.chatapp
 {
-    [Activity(Label = "ChatingApp", MainLauncher = true, Icon = "@drawable/icon")]
-    public class ChatActivity : Activity
+    [Activity(Label = "ChatingApp")]
+    public class ChatActivity : Activity, IChildEventListener
     {
         FirebaseClient firebase;
 
@@ -21,26 +22,35 @@ namespace ChatingApp
         private Button sendButton;
         private ListView chatMessageListView;
         List<ChatMessage> messages = new List<ChatMessage>();
+        string userName;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.activity_chat);
+            userName = Intent.GetStringExtra("Username");
+            messages.Clear();
 
             firebase = new FirebaseClient("https://chatapp-51f70.firebaseio.com/");
+            var options = new FirebaseOptions.Builder()
+                .SetApplicationId("chatapp-51f70")
+                .SetApiKey("AIzaSyCnYZMeuM5QB5rco0xYrJtUhDsjM4BRpn0")
+                .SetDatabaseUrl("https://chatapp-51f70.firebaseio.com/")
+           .Build();
+            FirebaseApp.InitializeApp(this, options);
+            FirebaseDatabase.Instance.GetReference("chats").AddChildEventListener(this);
 
-            initializeUI();
-            fetchChatMessages();
-            setupAdapter();
+            InitializeUI();
+            SetupAdapter();
         }
 
-        private void setupAdapter()
+        private void SetupAdapter()
         {
-            adapter = new ChatAdapter(messages, this);
+            adapter = new ChatAdapter(messages, this, userName);
             chatMessageListView.Adapter = adapter;
         }
 
-        private void initializeUI()
+        private void InitializeUI()
         {
             inputMessage = FindViewById<EditText>(Resource.Id.input_text);
             sendButton = FindViewById<Button>(Resource.Id.send_button);
@@ -48,35 +58,52 @@ namespace ChatingApp
 
             sendButton.Click += delegate
             {
-                uploadMessageToFCM();
+                UploadMessageToFCM();
             };
         }
 
-        private async void uploadMessageToFCM()
+        private async void UploadMessageToFCM()
         {
             string currentTime = DateTime.Now.ToString("yyyy - MM - dd HH: mm:ss");
+            string messageText = inputMessage.Text;
+            inputMessage.Text = "";
             var items = await firebase
                 .Child("chats")
-                .PostAsync(new ChatMessage(inputMessage.Text, "Test_User", currentTime));
-            inputMessage.Text = "";
+                .PostAsync(new ChatMessage(messageText, userName, currentTime));
+        }
 
-            fetchChatMessages();
+        public void OnChildAdded(DataSnapshot snapshot, string previousChildName)
+        {
+            ChatMessage message = new ChatMessage()
+            {
+                Message = snapshot.Child("Message").Value.ToString(),
+                Time = snapshot.Child("Time").Value.ToString(),
+                User = snapshot.Child("User").Value.ToString()
+            };
+
+            messages.Add(message);
+
             adapter.NotifyDataSetChanged();
         }
 
-        private async void fetchChatMessages()
+        public void OnChildChanged(DataSnapshot snapshot, string previousChildName)
         {
-            firebase = new FirebaseClient("https://chatapp-51f70.firebaseio.com/");
-            messages.Clear();
-            var items = await firebase
-                .Child("chats")
-                .OrderByKey()
-                .OnceAsync<ChatMessage>();
+            throw new NotImplementedException();
+        }
 
-            foreach (var item in items)
-            {
-                messages.Add(item.Object);
-            }
+        public void OnChildMoved(DataSnapshot snapshot, string previousChildName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnChildRemoved(DataSnapshot snapshot)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnCancelled(DatabaseError error)
+        {
+            throw new NotImplementedException();
         }
     }
 }

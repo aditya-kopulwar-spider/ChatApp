@@ -9,12 +9,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/send_button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:text="Send" />
     <EditText
         android:layout_toLeftOf="@+id/send_button"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="your message"

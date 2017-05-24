@@ -4,31 +4,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentStart="true"
-    android:id="@+id/chatMessageUserName"
-    android:textStyle="normal|bold"
-    android:textColor="@android:color/black"/>
-
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignBottom="@+id/chatMessageUserName"
-    android:layout_alignParentEnd="true"
-    android:id="@+id/chatMessageTimestamp"
-    android:textColor="@android:color/black"/>
-
-  <TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/chatMessageUserName"
-    android:layout_alignParentStart="true"
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner_1"
+    android:id="@+id/selfMessageBox"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
     android:layout_marginTop="5dp"
-    android:id="@+id/chatMessageText"
-    android:textSize="18sp"
-    android:textColor="@android:color/black"/>
-  
+    android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/selfChatMessageUserName"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/black"
+        android:text="UserName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/selfChatMessageUserName"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/selfChatMessageTimestamp"
+        android:textColor="@android:color/black"
+        android:text="2017 - 01 - 09 05: 07:00" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selfChatMessageUserName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/selfChatMessageText"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Text message is here!!!"
+        />
+  </RelativeLayout>
+
+  <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_corner"
+    android:id="@+id/othersMessageBox"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="40dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginTop="5dp"
+    android:padding="5dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/otherChatMessageUserName"
+        android:textStyle="normal|bold"
+        android:textColor="@color/Black"
+        android:text="UserName" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/otherChatMessageUserName"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/otherChatMessageTimestamp"
+        android:textColor="@color/Black"
+        android:text="2017 - 01 - 09 05: 07:00" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otherChatMessageUserName"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:id="@+id/otherChatMessageText"
+        android:textSize="18sp"
+        android:textColor="@color/Black"
+        android:text="Text message is here!!!"
+        />
+  </RelativeLayout>
+    
 </RelativeLayout>
