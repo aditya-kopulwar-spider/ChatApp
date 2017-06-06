@@ -4,9 +4,9 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Widget;
-using com.sl.chatapp;
+using com.sl.ChatApp;
 
-namespace com.sl.ChatApp.com.sl.chatapp.activities
+namespace com.sl.chatapp
 {
     [Activity(Label = "SL ChatApp", MainLauncher = true, Icon = "@drawable/icon")]
     public class LogInActivity : Activity
@@ -21,7 +21,6 @@ namespace com.sl.ChatApp.com.sl.chatapp.activities
             SetContentView(Resource.Layout.activity_login);
 
             SetupUI();
-            // Create your application here
         }
 
         private void SetupUI()

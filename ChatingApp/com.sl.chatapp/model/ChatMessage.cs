@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace com.sl.chatapp
+﻿namespace com.sl.chatapp
 {
     internal class ChatMessage
     {

@@ -32,12 +32,6 @@ namespace com.sl.chatapp
             messages.Clear();
 
             firebase = new FirebaseClient("https://chatapp-51f70.firebaseio.com/");
-            var options = new FirebaseOptions.Builder()
-                .SetApplicationId("chatapp-51f70")
-                .SetApiKey("AIzaSyCnYZMeuM5QB5rco0xYrJtUhDsjM4BRpn0")
-                .SetDatabaseUrl("https://chatapp-51f70.firebaseio.com/")
-           .Build();
-            FirebaseApp.InitializeApp(this, options);
             FirebaseDatabase.Instance.GetReference("chats").AddChildEventListener(this);
 
             InitializeUI();
