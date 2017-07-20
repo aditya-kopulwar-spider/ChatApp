@@ -2505,14 +2505,14 @@ namespace com.sl.ChatApp
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f06003a
-			public const int ApplicationName = 2131099706;
+			// aapt resource value: 0x7f060033
+			public const int ApplicationName = 2131099699;
 			
-			// aapt resource value: 0x7f06003b
-			public const int FirebaseDatabaseURL = 2131099707;
+			// aapt resource value: 0x7f060034
+			public const int FirebaseDatabaseURL = 2131099700;
 			
-			// aapt resource value: 0x7f060039
-			public const int Hello = 2131099705;
+			// aapt resource value: 0x7f060032
+			public const int Hello = 2131099698;
 			
 			// aapt resource value: 0x7f060011
 			public const int abc_action_bar_home_description = 2131099665;
@@ -2657,27 +2657,6 @@ namespace com.sl.ChatApp
 			
 			// aapt resource value: 0x7f060010
 			public const int common_signin_button_text_long = 2131099664;
-			
-			// aapt resource value: 0x7f060034
-			public const int default_web_client_id = 2131099700;
-			
-			// aapt resource value: 0x7f060035
-			public const int firebase_database_url = 2131099701;
-			
-			// aapt resource value: 0x7f060032
-			public const int gcm_defaultSenderId = 2131099698;
-			
-			// aapt resource value: 0x7f060036
-			public const int google_api_key = 2131099702;
-			
-			// aapt resource value: 0x7f060033
-			public const int google_app_id = 2131099699;
-			
-			// aapt resource value: 0x7f060037
-			public const int google_crash_reporting_api_key = 2131099703;
-			
-			// aapt resource value: 0x7f060038
-			public const int google_storage_bucket = 2131099704;
 			
 			// aapt resource value: 0x7f060024
 			public const int search_menu_title = 2131099684;

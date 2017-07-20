@@ -7,7 +7,6 @@ using Firebase.Xamarin.Database;
 using System.Collections.Generic;
 using System;
 using Firebase.Database;
-using Firebase;
 
 namespace com.sl.chatapp
 {
@@ -68,7 +67,7 @@ namespace com.sl.chatapp
 
         public void OnChildAdded(DataSnapshot snapshot, string previousChildName)
         {
-            ChatMessage message = new ChatMessage()
+            ChatMessage message = new   ChatMessage()
             {
                 Message = snapshot.Child("Message").Value.ToString(),
                 Time = snapshot.Child("Time").Value.ToString(),
